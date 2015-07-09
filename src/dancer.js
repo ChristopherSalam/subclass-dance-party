@@ -1,31 +1,31 @@
 
 // Class constructor
-var makeDancer = function(top, left, timeBetweenSteps){
+var Dancer = function(top, left, timeBetweenSteps){
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
-  this.step();
-  this.setPosition(top,left);
+  // this.step();
+  // this.setPosition(top,left);
   // console.log(this.$node.toggle);
 }
 
 // pseudoclassical boilerplate
-makeDancer.prototype = Object.create(makeDancer.prototype);
-makeDancer.prototype.constructor = makeDancer;
+Dancer.prototype = Object.create(Dancer.prototype);
+Dancer.prototype.constructor = Dancer;
 
 // class methods
-makeDancer.prototype.step = function(){
+Dancer.prototype.step = function(){
   //debugger;
   // the basic dancer doesn'do anything interesting at all on each step,
   // it just schedules the next step
-  //console.log("makeDancer")
+  //console.log("Dancer")
   // console.log("I'M HERE");
   // console.log(this);
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
-makeDancer.prototype.setPosition = function(top,left){
+Dancer.prototype.setPosition = function(top,left){
   var styleSettings = {
     top: top,
     left: left
