@@ -13,7 +13,43 @@
       <span class="title">object dance party</span>
       <a href="#" class="addElDancerButton" data-dancer-maker-function-name="ElDancer">add el dancer</a>
       <a href="#" class="addBlinkyDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="Dancer">add a dancer</a>     </div>
+      <a href="#" onclick="squareDance()"> Square Dance! </a>
+      <a href="#" onclick="lineUp()"> LineUP! </a>      
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="Dancer">add a dancer</a>    </div>
     <script src="src/init.js"></script>
+    <script>
+    $('.dancer').mouseenter(function(){
+      $(".dancer").animate({
+        top:"500",
+        left: "1000"
+      }, 500, function() {
+        // Animation complete.
+      });
+    }); 
+
+    var rotationFunc = function(){
+      $('.dancer').animate({
+
+      });
+    }
+
+    var lineUp = function(){
+      $(".dancer").animate({
+        top:"300",
+        // left: "1000"
+      }, 500, function() {
+        // Animation complete.
+      });
+    }; 
+    var squareDance = function(){
+      $('.eldancer').animate({
+        top :"300",
+        left:"300"
+      }, 1000, function(){
+
+      });
+    };    
+    </script>
+    }
   </body>
 </html>
