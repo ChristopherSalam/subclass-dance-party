@@ -25,7 +25,7 @@ $(document).ready(function(){
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      1000
     );
     //console.log(dancer);
     $('body').append(dancer.$node);
@@ -61,6 +61,13 @@ $(document).ready(function(){
     //console.log(dancer);
     $('body').append(dancer.$node);
 
+  });
+
+  $(".dancer").animate({
+    top:50,
+    left: 1000
+  }, 500, function() {
+    // Animation complete.
   });
 
 });

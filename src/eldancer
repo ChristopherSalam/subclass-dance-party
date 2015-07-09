@@ -1,0 +1,20 @@
+
+// constructor
+var ElDancer = function(top,left,timeBetweenSteps){
+  Dancer.call(this,top,left,timeBetweenSteps);
+  // this.$node = $('<span class="dancer"></span>');
+  this.step();
+};
+
+
+// pseudoclassical boilerplate
+ElDancer.prototype = Object.create(Dancer.prototype);
+ElDancer.prototype.constructor = ElDancer;
+
+
+// class methods
+ElDancer.prototype.step = function(){
+  console.log(this);
+  Dancer.prototype.step.call(this);
+  this.$node.toggle();
+};
