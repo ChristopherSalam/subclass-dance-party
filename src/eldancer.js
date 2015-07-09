@@ -2,15 +2,14 @@
 // constructor
 var ElDancer = function(top,left,timeBetweenSteps){
   Dancer.call(this,top,left,timeBetweenSteps);
-  // this.$node = $('<span class="dancer"></span>');
+  this.setPosition(top,left);
+  this.$node = $('<img src="img/cat.png" height="160px" width="120px" class="dancer">');
   this.step();
 };
-
 
 // pseudoclassical boilerplate
 ElDancer.prototype = Object.create(Dancer.prototype);
 ElDancer.prototype.constructor = ElDancer;
-
 
 // class methods
 ElDancer.prototype.step = function(){

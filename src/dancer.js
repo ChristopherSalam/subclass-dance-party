@@ -2,8 +2,7 @@
 // Class constructor
 var Dancer = function(top, left, timeBetweenSteps){
   this.timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<img src="img/Sittingmouse.jpg" height="20px" width="20px" class="dancer">');
-  
+  this.$node = $('<img src="img/Sittingmouse.jpg" height="80px" width="60px" class="dancer">');
   this.setPosition(top,left);
   //this.step();
 }
