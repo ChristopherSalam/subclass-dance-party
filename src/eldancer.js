@@ -2,7 +2,7 @@
 // constructor
 var ElDancer = function(top,left,timeBetweenSteps){
   Dancer.call(this,top,left,timeBetweenSteps);
-  this.setPosition(top,left);
+  //this.setPosition(top,left);
   this.$node = $('<img src="img/cat.png" height="160px" width="120px" class="dancer">');
   this.step();
 };
