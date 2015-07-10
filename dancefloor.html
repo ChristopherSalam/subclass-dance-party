@@ -10,46 +10,36 @@
   </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addElDancerButton" data-dancer-maker-function-name="ElDancer">add el dancer</a>
-      <a href="#" class="addBlinkyDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>
-      <a href="#" onclick="squareDance()"> Square Dance! </a>
-      <a href="#" onclick="lineUp()"> LineUP! </a>      
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="Dancer">add a dancer</a>    </div>
+      <strong><a class="title">Object Dance Party</a></strong>
+      <a href="#" class="addElDancerButton floatright" data-dancer-maker-function-name="ElDancer">Add a Fish</a>
+      <a href="#" class="addBlinkyDancerButton floatright" data-dancer-maker-function-name="BlinkyDancer">Add a Cat</a>
+      <a href="#" onclick="squareDance()" class="floatright"> Square Dance! </a>
+      <a href="#" onclick="lineUp()" class="floatright"> Line up! </a>      
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="Dancer" class="floatright"> Add a Mouse</a>    
+      <a href="#" onclick="breakDance()" class="floatright"> Break the Dance </a> 
+    </div>
     <script src="src/init.js"></script>
     <script>
-    $('.dancer').mouseenter(function(){
-      $(".dancer").animate({
-        top:"500",
-        left: "1000"
-      }, 500, function() {
-        // Animation complete.
-      });
-    }); 
-
-    var rotationFunc = function(){
-      $('.dancer').animate({
-
-      });
+    var breakDance = function(){
+      for(var i = 0;i<dancers.length;i++){
+        console.log(dancers[i].setPosition);
+        var top = $("body").height() * Math.random();
+        var left = $("body").width() * Math.random();
+        dancers[i].setPosition(top,left);
+      }
     }
-
     var lineUp = function(){
       $(".dancer").animate({
-        top:"300",
+        top:"300"
         // left: "1000"
-      }, 500, function() {
-        // Animation complete.
-      });
+      }, 500, function(){});
     }; 
     var squareDance = function(){
-      $('.eldancer').animate({
+      $('.dancer').animate({
         top :"300",
         left:"300"
-      }, 1000, function(){
-
-      });
+      }, 1000, function(){});
     };    
     </script>
-    }
   </body>
 </html>

@@ -1,9 +1,9 @@
-
 // constructor
 var ElDancer = function(top,left,timeBetweenSteps){
   Dancer.call(this,top,left,timeBetweenSteps);
-  //this.setPosition(top,left);
-  this.$node = $('<img src="img/cat.png" height="160px" width="120px" class="eldancer">');
+  this.$node = $('<img src="img/fish.gif" height="160px" width="120px" class="dancer">');
+  console.log(top,left)
+  this.setPosition(top,left);
   this.step();
 };
 
@@ -13,7 +13,10 @@ ElDancer.prototype.constructor = ElDancer;
 
 // class methods
 ElDancer.prototype.step = function(){
-  console.log(this);
   Dancer.prototype.step.call(this);
-  this.$node.toggle();
+//this.$node.toggle();
 };
+
+ElDancer.prototype.setPosition = function(top, left){
+  Dancer.prototype.setPosition.call(this, top, left);
+}
